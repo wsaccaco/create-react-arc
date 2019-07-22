@@ -1,5 +1,6 @@
 import React from "react";
 import styled from "styled-components";
+import { devices } from "../components/tools/devices";
 
 const S = {};
 
@@ -22,7 +23,7 @@ S.Panel = styled.div`
   padding: 40px 50px;
   display: flex;
   color: #444;
-  @media (max-width: 639px) {
+  @media (${devices.mobile}) {
     flex-direction: column;
     height: auto;
     max-width: calc(100% - 20px);
@@ -41,7 +42,7 @@ S.Title = styled.span`
   letter-spacing: 0.56px;
   text-align: center;
   margin-bottom: 35px;
-  @media (max-width: 639px) {
+  @media (${devices.mobile}) {
     margin-bottom: 30px;
   }
 `;
@@ -49,7 +50,7 @@ S.Title = styled.span`
 S.Wrapbenefit = styled.div`
   display: flex;
   justify-content: space-between;
-  @media (max-width: 639px) {
+  @media (${devices.mobile}) {
     flex-direction: column;
     align-items: center;
     line-height: 2.5;
@@ -68,7 +69,7 @@ S.Foot = styled.div`
   justify-content: flex-end;
   flex-direction: column;
   align-items: flex-end;
-  @media (max-width: 639px) {
+  @media (${devices.mobile}) {
     align-items: center;
   }
 `;
@@ -80,7 +81,7 @@ S.FootContent = styled.div`
   justify-content: flex-start;
   align-items: flex-end;
   margin-top: 25px;
-  @media (max-width: 639px) {
+  @media (${devices.mobile}) {
     margin: 0;
     max-width: inherit;
     flex: 1;
@@ -92,7 +93,7 @@ S.WrapDocument = styled.div`
   display: flex;
   justify-content: center;
   min-width: 250px;
-  @media (max-width: 639px) {
+  @media (${devices.mobile}) {
     margin-top: 40px;
   }
 `;
