@@ -5,12 +5,12 @@ import { devices } from "../components/tools/devices";
 const S = {};
 
 S.Background = styled.div`
-  width: 100vw;
-  height: 100vh;
-  background-color: rgba(0, 0, 0, 0.6);
+  background-color: red;
   display: flex;
   justify-content: center;
   align-items: center;
+  margin: 0 auto;
+  border-radius: 4px;
 `;
 
 S.Panel = styled.div`
@@ -107,11 +107,15 @@ S.SpanFoot = styled.span`
   line-height: 24px;
 `;
 
+S.Icon = styled.i`
+  font-size: 20px;
+`;
+
 function App() {
   return (
-    <div style={{ height: "200vh" }}>
+    <div>
       <S.Background>
-        <S.Panel>
+        {/* <S.Panel>
           <S.Content>
             <S.Title>
               VALIDANDO TU SUSCRIPCIÓN AL DIARIO IMPRESO, APROVECHA EL DESCUENTO
@@ -135,7 +139,21 @@ function App() {
           <S.WrapDocument>
             <strong>Ingresa tu Documento</strong>
           </S.WrapDocument>
-        </S.Panel>
+        </S.Panel> */}
+        <p>ACCESO NO AUTORIZADO</p>
+        <S.Icon>
+          <svg
+            width="1em"
+            height="1em"
+            fill="currentColor"
+            viewBox="64 64 896 896"
+          >
+            <title>Importante</title>
+            <path d="M470.8 344.4c0-22.8 18.6-39.8 41-39.8 22.8 0 41.4 17 41.4 39.8s-18.6 40-41.4 40c-22.4 0-41-17.2-41-40zM473.6 415.8h76.4v288.2h-76.4v-288.2z" />
+            <path d="M512 152c96.2 0 186.6 37.4 254.6 105.4s105.4 158.4 105.4 254.6-37.4 186.6-105.4 254.6-158.4 105.4-254.6 105.4c-96.2 0-186.6-37.4-254.6-105.4s-105.4-158.4-105.4-254.6 37.4-186.6 105.4-254.6 158.4-105.4 254.6-105.4zM512 96c-229.8 0-416 186.2-416 416s186.2 416 416 416 416-186.2 416-416-186.2-416-416-416z" />
+          </svg>
+        </S.Icon>
+        <a href="/">VOLVER A LA PORTADA</a>
       </S.Background>
     </div>
   );
